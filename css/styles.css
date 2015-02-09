@@ -1,0 +1,168 @@
+body {
+  color: #339933;
+  font-family: "Roboto Slab", serif;
+  line-height: 1.5;
+}
+
+a {
+  font-weight: bold;
+}
+
+a:visited {
+  color: blue;
+}
+
+.detail-bar {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(200, 200, 200, 0.90);
+  text-align: center;
+  top: 0;
+  left: 0;
+  padding: 3px;
+  border-bottom: 2px solid #262;
+}
+
+.detail-bar label {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.65em;
+  color: #252;
+}
+
+.detail-2, .detail-3, .detail-4, .detail-5 {
+  display: none;
+}
+
+body.show-detail-2 .detail-2,
+body.show-detail-3 .detail-2,
+body.show-detail-4 .detail-2,
+body.show-detail-5 .detail-2,
+body.show-detail-3 .detail-3,
+body.show-detail-4 .detail-3,
+body.show-detail-5 .detail-3,
+body.show-detail-4 .detail-4,
+body.show-detail-5 .detail-4,
+body.show-detail-5 .detail-5 {
+  display: initial;
+  animation-name: fadein;
+  animation-duration: 0.25s;
+  animation-iteration-count: 1;
+  -webkit-animation-name: fadein;
+  -webkit-animation-duration: 0.25s;
+  -webkit-animation-iteration-count: 1;
+}
+
+img.detail-1, img.detail-2, img.detail-3, img.detail-4 {
+  -webkit-animation-name: none !important;
+  animation-name: none !important;
+}
+
+body.show-detail-2 .detail-1-only,
+body.show-detail-3 .detail-1-only,
+body.show-detail-3 .detail-2-only,
+body.show-detail-4 .detail-1-only,
+body.show-detail-4 .detail-2-only,
+body.show-detail-4 .detail-3-only {
+  display: none;
+}
+
+.detail-2 {
+  color: #339999;
+}
+
+.detail-3 {
+  color: #333399;
+}
+
+.detail-4 {
+  color: #993333;
+}
+
+h1 {
+  color: #242;
+}
+
+img {
+  max-width: 100%;
+  margin: 1em 0;
+  border-radius: 12px;
+}
+
+main {
+  padding-top: 25px;
+}
+
+@media only screen 
+and (min-width : 800px) {
+  main {
+    display: flex;
+  }
+
+  main > div {
+    max-width: 33%;
+    margin: 1em;
+  }
+}
+
+@media only screen 
+and (max-width : 800px) {
+  img {
+    float: left;
+    margin: 1em;
+    max-width: 25%;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+    -webkit-transform: translateY(12px)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px)
+  }
+}
+
+@-moz-keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+    -webkit-transform: translateY(12px)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px)
+  }
+}
+
+@-o-keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+    -webkit-transform: translateY(12px)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px)
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+    -webkit-transform: translateY(12px)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px)
+  }
+}

@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <main>
+      <div class="col-1">
+        <img src="images/detail-1.jpg" class="detail-1-only" />
+        <img src="images/detail-2.jpg" class="detail-2 detail-2-only" />
+        <img src="images/detail-3.jpg" class="detail-3 detail-3-only" />
+        <img src="images/detail-4.jpg" class="detail-4 detail-4-only" />
+      </div>
+      <div class="col-2">
+        <section id="about">
+          <h1>Hi there - I'm Chris Dary. I'm a<span class="detail-2"> Dad,</span> Software Engineer and Team Lead</span><span class="detail-3"> who Likes Sci-Fi</span><span class="detail-4"> and Caught a Kite on a Power Line one time</span>.
+          </h1>
+
+          <p>I'm obsessed with ideas and technology as tools for social change, particularly on the web.</p>
+
+          <p>I like to keep my hands in all sorts of web technology and occasionally lead teams. I'm a technical generalist and enjoy all aspects of the stack. <span class="detail-2">I'm a pragmatist: I've used a number of languages to get things done (python, javascript, php, etc), but they're primarily means to great products.</span></p>
+
+          <p class="detail-3"> I'm interested in things like software architecture, product &amp; business strategy, RESTful APIs, design, scaling, accessibility, UX, web standards, typography, community building, semantic HTML, and helping people work well together.</p>
+
+          <p>I want to make the world a better place. I try to be honest in all things.</p>
+        </section>
+        <section id="work">
+          <h1>Work</h1>
+          <p>I work at <a href="https:/www.reddit.com">reddit</a>, where I'm leading the reddit core team<span class="detail-2">, a team of about 6 folks focused on the product engineering side of reddit.com</span>.</p>
+          <p>Previously, I've worked at Etsy as Seller Economics Lead and API Lead, was CTO of Readability and a partner at now-acquired consulting firm Arc90.</p>
+          <p class="detail-3">While at Arc90 I was the initial creator of an idea collaboration startup called Kindling, and primary tech lead on Readability, whose original javascript is sourced in Apple's Safari Reader.</p>
+        </section>
+      </div>
+      <div class="col-3">
+        <section id="projects">
+          <h1>Projects</h1>
+          <ul>
+            <li><a href="https://www.readability.com">Readability</a> - Easy Reading</li>
+            <li><a href="https://www.kindlingapp.com">Kindling</a> - Idea Collaboration Software</li>
+            <li><a href="http://www.gifrever.se">gifrever.se</a> - Fully client side gif reverser</li>
+            <li><a href="https://www.reddit.com/r/serendipity">Serendipity</a> - reddit bot to broaden horizons</li>
+            <li><a href="http://www.intranaut.co">Intranaut</a> (coming soon) - chrome/firefox extension to make navigating company resources easier</li>
+            <li><a href="http://www.jsonlint.com">JSON Lint</a> - simple JSON validator/formatter</li>
+            <li class="detail-4"><a href="#">GifVine &amp; GifInstagram</a> - Now-defunct project to turn vines/instagrams to gifs</li>
+          </ul>
+        </section>
+        <section id="links" role="contentinfo">
+          <h1>Links</h1>
+          <ul>
+            <li><a href="https://www.twitter.com/chrisdary">Twitter</a></li>
+            <li><a href="https://www.github.com/umbrae">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/chrisdary">LinkedIn</a></li>
+            <li><a href="mailto:umbrae@gmail.com">Email</a></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <div class="detail-bar">
+      <input type="range" id="detail" min="1" max="4" step="1" value="1" />
+      <label for="detail">Choose Detail</label>
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
