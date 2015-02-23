@@ -1,9 +1,30 @@
-window.addEventListener('load', function() {
-  var detailRange = document.getElementById('detail');
+var each = Array.prototype.forEach;
 
-  detailRange.addEventListener('input', function(e) {
-    document.body.classList.remove('show-detail-1', 'show-detail-2', 'show-detail-3', 'show-detail-4', 'show-detail-5');
-    document.body.classList.add('show-detail-' + e.target.value);
+function switchDetail(level) {
+  document.body.classList.remove('show-detail-1', 'show-detail-2', 'show-detail-3', 'show-detail-4', 'show-detail-5');
+  document.body.classList.add('show-detail-' + level);
+
+  if (typeof window.ga !== "undefined") {
+    ga('send', 'event', 'detail', 'switch', level /* as label, not value */);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  FastClick.attach(document.body);
+
+  each.call(document.getElementsByClassName('detail-button'), function(el) {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      switchDetail(e.target.getAttribute('data-level'));
+    });
   });
-  detailRange.focus();
+
+  each.call(document.getElementsByClassName('detail-scrubber'), function(el) {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      var current = parseInt(document.body.className.replace(/.*show-detail-(\d+).*/, '$1'), 10);
+      var difference = parseInt(e.target.getAttribute('data-direction'), 10);
+      switchDetail(Math.max(1, Math.min(4, current + difference)));
+    });
+  });
 });
