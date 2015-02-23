@@ -166,6 +166,7 @@ body.show-detail-4 .detail-3-only {
 
   main .col-1 {
     flex-shrink: 1;
+    max-width: 20%;
   }
 }
 
