@@ -27,4 +27,14 @@ document.addEventListener('DOMContentLoaded', function() {
       switchDetail(Math.max(1, Math.min(4, current + difference)));
     });
   });
+
+  document.querySelector('.powerline').addEventListener('click', function(e) {
+    var expando = document.querySelector('.powerline-expando');
+
+    expando.style.display = expando.style.display == 'block' ? 'none' : 'block';
+    requestAnimationFrame(function() {
+      expando.style.height = expando.style.display == 'block' ? expando.querySelector('iframe').height : 0;
+    })
+  });
+
 });

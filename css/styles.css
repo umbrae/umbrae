@@ -13,6 +13,10 @@ a:visited {
   color: blue;
 }
 
+a:hover {
+  color: #009;
+}
+
 h1 {
   color: #335;
 }
@@ -44,22 +48,22 @@ main {
   border-top: 5px solid #EBEBCF;
   font-size: 11px;
   text-align: center;
-  line-height: 30px;
+  line-height: 26px;
 }
 
 .detail-scrubber {
   padding: 5px;
   font-variant: small-caps;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .detail-scrubber.less {
-  padding-right: 20px;
+  padding-right: 15px;
 }
 
 .detail-scrubber.more {
-  padding-left: 20px;
+  padding-left: 15px;
 }
 
 .detail-scrubber:hover {
@@ -72,16 +76,19 @@ body.show-detail-4 .detail-scrubber.more {
 }
 
 .detail-button {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   text-indent: -9000px;
   display: inline-block;
-  margin: 10px -5px;
+  margin: 10px -3px;
   opacity: 0.35;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 .detail-button:hover,
@@ -96,6 +103,10 @@ body.show-detail-4 .detail-button[data-level="2"],
 body.show-detail-4 .detail-button[data-level="3"],
 body.show-detail-4 .detail-button[data-level="4"] {
   opacity: 1;
+}
+
+.detail-button:hover {
+  border-color: rgba(0,0,0,0.25);
 }
 
 /** Detail Display **/
@@ -210,6 +221,20 @@ body.show-detail-4 .detail-3-only {
   .portrait img.detail-4-only {
     display: inline !important;
   }
+}
+
+a.powerline {
+  color: inherit;
+}
+
+.powerline-expando {
+  display: none;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /** Animations **/
