@@ -1,5 +1,5 @@
 body {
-  color: #3A3496;
+  color: #3a3496;
   font-family: "Roboto Slab", serif;
   line-height: 1.5;
 }
@@ -48,8 +48,8 @@ main {
   left: 0;
   width: 100%;
   padding: 3px;
-  background-color: rgba(255, 255, 255, 0.90);
-  border-top: 5px solid #EBEBCF;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 5px solid #ebebcf;
   font-size: 11px;
   text-align: center;
   line-height: 26px;
@@ -110,12 +110,14 @@ body.show-detail-4 .detail-button[data-level="4"] {
 }
 
 .detail-button:hover {
-  border-color: rgba(0,0,0,0.25);
+  border-color: rgba(0, 0, 0, 0.25);
 }
 
 /** Detail Display **/
 
-.detail-2, .detail-3, .detail-4 {
+.detail-2,
+.detail-3,
+.detail-4 {
   display: none;
 }
 
@@ -155,34 +157,34 @@ body.show-detail-4 .detail-3-only {
 /** Theming **/
 
 .detail-button[data-level="1"] {
-  background-color: #3A3496;
+  background-color: #3a3496;
 }
 
 .detail-2 {
-  color: #F0392B;
+  color: #f0392b;
 }
 
 .detail-button[data-level="2"] {
-  background-color: #F0392B;
+  background-color: #f0392b;
 }
 
 .detail-3 {
-  color: #FEB014;
+  color: #feb014;
 }
 
 .detail-button[data-level="3"] {
-  background-color: #FEB014;
+  background-color: #feb014;
 }
 
 .detail-4 {
-  color: #FAD107;
+  color: #fad107;
 }
 
 .detail-button[data-level="4"] {
-  background-color: #FAD107;
+  background-color: #fad107;
 }
 
-@media only screen and (min-width : 800px) {
+@media only screen and (min-width: 800px) {
   main {
     display: -webkit-flex;
     display: flex;
@@ -200,7 +202,7 @@ body.show-detail-4 .detail-3-only {
   }
 }
 
-@media only screen and (max-width : 800px) {
+@media only screen and (max-width: 800px) {
   body {
     line-height: 1.4;
   }
@@ -215,7 +217,11 @@ body.show-detail-4 .detail-3-only {
     margin: 30px 10px 0 0;
     max-height: 60px;
   }
+}
 
+.sunny img {
+  max-width: 100%;
+  margin: 0;
 }
 
 a.powerline {
@@ -238,12 +244,12 @@ a.powerline {
   0% {
     opacity: 0;
     transform: translateY(12px);
-    -webkit-transform: translateY(12px)
+    -webkit-transform: translateY(12px);
   }
   100% {
     opacity: 1;
     transform: translateY(0px);
-    -webkit-transform: translateY(0px)
+    -webkit-transform: translateY(0px);
   }
 }
 
