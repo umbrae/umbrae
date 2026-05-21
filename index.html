@@ -1,29 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Umbrae is Chris Dary, Product-Focused Engineer &amp; Leader</title>
-    <link rel="shortcut icon" href="/images/favicon.png" />
+    <link rel="icon" href="/images/favicon.png" />
     <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700"
-      rel="stylesheet"
-      type="text/css"
     />
-    <link
-      href="css/styles.css"
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-    />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body class="show-detail-1">
     <main>
       <div class="col-1">
         <figure class="portrait">
-          <img src="images/detail-1.jpg" class="detail-1-only" />
-          <img src="images/detail-2.jpg" class="detail-2 detail-2-only" />
-          <img src="images/detail-3.jpg" class="detail-3 detail-3-only" />
-          <img src="images/detail-4.jpg" class="detail-4 detail-4-only" />
+          <img src="images/detail-1.jpg" alt="Portrait of Chris Dary" class="detail-1-only" />
+          <img src="images/detail-2.jpg" alt="" class="detail-2 detail-2-only" />
+          <img src="images/detail-3.jpg" alt="" class="detail-3 detail-3-only" />
+          <img src="images/detail-4.jpg" alt="" class="detail-4 detail-4-only" />
         </figure>
       </div>
       <div class="col-2">
@@ -50,12 +45,12 @@
             primarily means to great products.
           </p>
           <p class="detail-3">
-            <br /><br />Lately I've also been interested in mental health,
-            voting systems, and civic technology.
+            Lately I've also been interested in mental health, voting systems,
+            and civic technology.
           </p>
 
           <div class="detail-4">
-            <br /><br />This is me with my dog Sunny:
+            <p>This is me with my dog Sunny:</p>
 
             <figure class="sunny">
               <img
@@ -137,7 +132,7 @@
             </li>
           </ul>
         </section>
-        <section id="links" role="contentinfo">
+        <section id="links">
           <h1>Links</h1>
           <ul>
             <li>
@@ -149,7 +144,7 @@
         </section>
       </div>
     </main>
-    <div class="detail-bar">
+    <nav class="detail-bar" aria-label="Detail level">
       <a class="detail-scrubber less" href="#" data-direction="-1"
         >&lsaquo; less detail</a
       >
@@ -160,32 +155,7 @@
       <a class="detail-scrubber more" href="#" data-direction="+1"
         >more detail &rsaquo;</a
       >
-    </div>
-    <script type="text/javascript" src="js/fastclick-1.0.0.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        ((i[r] =
-          i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date()));
-        ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(
-        window,
-        document,
-        "script",
-        "//www.google-analytics.com/analytics.js",
-        "ga",
-      );
-
-      ga("create", "UA-51520893-1", "auto");
-      ga("send", "pageview");
-    </script>
+    </nav>
+    <script src="js/index.js"></script>
   </body>
 </html>

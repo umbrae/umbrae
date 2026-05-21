@@ -1,40 +1,32 @@
-var each = Array.prototype.forEach;
+const MIN_LEVEL = 1;
+const MAX_LEVEL = 4;
+let currentLevel = 1;
 
 function switchDetail(level) {
-  document.body.classList.remove('show-detail-1', 'show-detail-2', 'show-detail-3', 'show-detail-4', 'show-detail-5');
-  document.body.classList.add('show-detail-' + level);
-
-  if (typeof window.ga !== "undefined") {
-    ga('send', 'event', 'detail', 'switch', level /* as label, not value */);
-  }
+  const next = Math.max(MIN_LEVEL, Math.min(MAX_LEVEL, Number(level)));
+  document.body.classList.remove(
+    'show-detail-1',
+    'show-detail-2',
+    'show-detail-3',
+    'show-detail-4',
+  );
+  document.body.classList.add(`show-detail-${next}`);
+  currentLevel = next;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  FastClick.attach(document.body);
-
-  each.call(document.getElementsByClassName('detail-button'), function(el) {
-    el.addEventListener('click', function(e) {
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.detail-button').forEach((el) => {
+    el.addEventListener('click', (e) => {
       e.preventDefault();
-      switchDetail(e.target.getAttribute('data-level'));
+      switchDetail(e.currentTarget.dataset.level);
     });
   });
 
-  each.call(document.getElementsByClassName('detail-scrubber'), function(el) {
-    el.addEventListener('click', function(e) {
+  document.querySelectorAll('.detail-scrubber').forEach((el) => {
+    el.addEventListener('click', (e) => {
       e.preventDefault();
-      var current = parseInt(document.body.className.replace(/.*show-detail-(\d+).*/, '$1'), 10);
-      var difference = parseInt(e.target.getAttribute('data-direction'), 10);
-      switchDetail(Math.max(1, Math.min(4, current + difference)));
+      const direction = Number(e.currentTarget.dataset.direction);
+      switchDetail(currentLevel + direction);
     });
   });
-
-  document.querySelector('.powerline').addEventListener('click', function(e) {
-    var expando = document.querySelector('.powerline-expando');
-
-    expando.style.display = expando.style.display == 'block' ? 'none' : 'block';
-    requestAnimationFrame(function() {
-      expando.style.height = expando.style.display == 'block' ? expando.querySelector('iframe').height : 0;
-    })
-  });
-
 });
